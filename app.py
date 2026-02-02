@@ -46,7 +46,7 @@ def main() -> None:
 
         st.text_input("Staff password", type="password", key="staff_password")
         if not _staff_password_ok():
-            st.info("Enter the staff password to enable upload. Default is `staff123` (set `STAFF_PASSWORD` to change).")
+            st.info("Enter the staff password to enable upload.")
         else:
             uploaded = st.file_uploader("Upload marks PDF", type=["pdf"])
             if uploaded is not None:
